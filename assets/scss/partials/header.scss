@@ -1,6 +1,7 @@
 .header {
     background-color: $red;
     margin-bottom: 50px;
+    color: white;
     .header__wrapper {
       padding: 5px 0px;
       width: 100%;
@@ -39,6 +40,7 @@
             font-size: 14px;
             color: $black;
             font-weight: 600;
+            max-width: none;
             &::placeholder {
               font-weight: 300;
               color: rgba(0, 0, 0, 0.7);
