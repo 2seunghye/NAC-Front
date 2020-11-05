@@ -1,6 +1,12 @@
 .header {
-  background-color: $red;
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  background-color: #0066ff;
   margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   .header__wrapper {
     padding: 5px 0px;
     width: 100%;
@@ -14,21 +20,30 @@
         color: white;
         font-size: 30px;
       }
+      &:nth-child(1) {
+        display: flex;
+        a {
+          font-weight: 700;
+          color: #fff;
+          padding: 0 15px;
+        }
+      }
       &:nth-child(2) {
         width: 100%;
         justify-self: center;
       }
       &:last-child {
         justify-self: end;
+        a {
+          padding: 0 10px;
+          color: #fff;
+        }
       }
       ul {
         display: flex;
         color: white;
         font-weight: 600;
         text-transform: uppercase;
-        li:not(:last-child) {
-          margin-right: 15px;
-        }
       }
       form {
         width: 100%;

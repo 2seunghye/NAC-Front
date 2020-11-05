@@ -2,10 +2,12 @@ header.header
     .header__wrapper
         .header__column
             a(href=routes.home)
-                i.fab.fa-youtube
+                h2 NAC Service
+            h3 영남대 네트워크
+                
         .header__column
             form(action=routes.search, method="get")
-                input(type="text", placeholder="Search by term...", name="term")
+                input(type="text", placeholder="검색어를 입력하세요", name="term")
         .header__column
             ul
                 if !loggedUser
@@ -13,10 +15,5 @@ header.header
                         a(href=routes.join) Join
                     li
                         a(href=routes.login) Log In
-                else 
-                    li
-                        a(href=`/videos${routes.upload}`) Upload
-                    li
-                        a(href=routes.me) Profile
-                    li
+                else
                         a(href=routes.logout) Log Out
