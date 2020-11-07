@@ -6,9 +6,9 @@ const btn = document.getElementById('test-btn');
 const container = document.getElementById('container');
 
 const testView = () => {
-  fetch(`https://dapi.kakao.com/v2/local/search/keyword.json?y=37.514322572335935&x=127.06283102249932&radius=20000&query=카카오프렌즈`, {
+  fetch(`링크`, {
     headers: {
-      Authorization: `KakaoAK dc9d70e5667aecff7649401efacca9f1`,
+      Authorization: ``,
     },
   }).then((res) => {
     if (res.status === 200 || res.status === 201) {
