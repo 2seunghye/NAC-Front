@@ -47,11 +47,87 @@ button {
   color: white;
 }
 
-button.delete {
-  background-color: $dark-red;
-}
-
 button,
 input[type='submit'] {
   cursor: pointer;
+}
+
+.test-btn {
+  display: none;
+}
+
+#objectTable {
+  display: none;
+}
+
+#container {
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: space-around;
+  display: flex;
+  width: 90%;
+}
+
+.content__column {
+  margin: 40px;
+  background-color: #fff;
+  padding: 20px;
+  width: 33%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  #lookupTable {
+    dl {
+      width: 100%;
+      display: flex;
+      padding: 7px;
+      border-bottom: 1px solid #ddd;
+    }
+    dt {
+      font-weight: 700;
+    }
+    dt,
+    dd {
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+  }
+}
+
+#objectTable {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+#objectTable th {
+  color: #333;
+  background: #f8f8f8;
+  text-align: center;
+}
+#objectTable th,
+#objectTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+#objectTable th:first-child,
+#objectTable td:first-child {
+  border-left: 0;
+}
+#objectTable th:last-child,
+#objectTable td:last-child {
+  border-right: 0;
+}
+#objectTable tr td:first-child {
+  text-align: center;
+}
+#objectTable caption {
+  caption-side: bottom;
+  display: none;
 }

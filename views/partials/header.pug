@@ -4,10 +4,6 @@ header.header
             a(href=routes.home)
                 h2 NAC Service
             h3 영남대 네트워크
-                
-        .header__column
-            form(action=routes.search, method="get")
-                input(type="text", placeholder="검색어를 입력하세요", name="term")
         .header__column
             ul
                 if !loggedUser

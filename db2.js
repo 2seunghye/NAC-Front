@@ -1,32 +1,62 @@
-export const arrays = [
+export const lookUpArr = [
   {
-    methodName: 'network1',
-    subject: { name: 'name1', macAddress: '0.0.0.0' },
+    abi: 'accessControl',
+    methodName: 'Yu205',
     objects: [
       { name: 'obj1', macAddress: '0.0.0.0' },
       { name: 'obj2', macAddress: '0.0.0.0' },
     ],
+    subject: { macAddress: '0.0.0.0', name: 'name1' },
     scName: 'acc',
-    abi: 'accessControl',
   },
   {
-    methodName: 'network2',
-    subject: { name: 'name2', macAddress: '0.0.0.0' },
+    abi: 'accessControl',
+    methodName: 'Yu206',
     objects: [
       { name: 'obj1', macAddress: '0.0.0.0' },
       { name: 'obj2', macAddress: '0.0.0.0' },
     ],
+    subject: { macAddress: '0.0.0.0', name: 'name1' },
     scName: 'acc',
-    abi: 'accessControl',
   },
   {
-    methodName: 'network3',
-    subject: { name: 'name3', macAddress: '0.0.0.0' },
+    abi: 'accessControl',
+    methodName: 'Yu207',
     objects: [
       { name: 'obj1', macAddress: '0.0.0.0' },
       { name: 'obj2', macAddress: '0.0.0.0' },
     ],
+    subject: { macAddress: '0.0.0.0', name: 'name1' },
     scName: 'acc',
+  },
+  {
     abi: 'accessControl',
+    methodName: 'Yu208',
+    objects: [
+      { name: 'obj1', macAddress: '0.0.0.0' },
+      { name: 'obj2', macAddress: '0.0.0.0' },
+    ],
+    subject: { macAddress: '0.0.0.0', name: 'name1' },
+    scName: 'acc',
+  },
+  {
+    abi: 'accessControl',
+    methodName: 'Yu209',
+    objects: [
+      { name: 'obj1', macAddress: '0.0.0.0' },
+      { name: 'obj2', macAddress: '0.0.0.0' },
+    ],
+    subject: { macAddress: '0.0.0.0', name: 'name1' },
+    scName: 'acc',
+  },
+  {
+    abi: 'accessControl',
+    methodName: 'Yu210',
+    objects: [
+      { name: 'obj1', macAddress: '0.0.0.0' },
+      { name: 'obj2', macAddress: '0.0.0.0' },
+    ],
+    subject: { macAddress: '0.0.0.0', name: 'name1' },
+    scName: 'acc',
   },
 ];
