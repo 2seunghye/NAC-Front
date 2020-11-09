@@ -1,6 +1,11 @@
 import routes from '../routes';
 
 import { lookUpArr } from '../db2';
+
+export const error = (req, res) => {
+  res.render('error', { pageTitle: 'error' });
+};
+
 export const home = (req, res) => {
   res.render('home', { pageTitle: 'home', lookUpArr });
 };

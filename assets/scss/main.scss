@@ -52,11 +52,12 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-.test-btn {
-  display: none;
-}
+// .test-btn {
+//   display: none;
+// }
 
-#objectTable {
+#objectTable,
+#misTable {
   display: none;
 }
 
@@ -65,11 +66,11 @@ input[type='submit'] {
   margin-top: 20px;
   justify-content: space-around;
   display: flex;
-  width: 90%;
+  width: 100%;
 }
 
 .content__column {
-  margin: 40px;
+  margin: 10px;
   background-color: #fff;
   padding: 20px;
   width: 33%;
@@ -82,7 +83,8 @@ input[type='submit'] {
     color: #444;
     margin-bottom: 10px;
   }
-  #lookupTable {
+  #lookupTable,
+  #policyTable {
     dl {
       width: 100%;
       display: flex;
@@ -101,33 +103,54 @@ input[type='submit'] {
   }
 }
 
-#objectTable {
+#objectTable,
+#misTable {
   width: 100%;
   margin-top: 10px;
   border-collapse: collapse;
 }
-#objectTable th {
+#objectTable th,
+#misTable th {
   color: #333;
   background: #f8f8f8;
   text-align: center;
 }
 #objectTable th,
-#objectTable td {
+#misTable th,
+#objectTable td,
+#misTable td {
   padding: 10px;
   border: 1px solid #ddd;
 }
 #objectTable th:first-child,
-#objectTable td:first-child {
+#misTable th:first-child,
+#objectTable td:first-child,
+#misTable td:first-child {
   border-left: 0;
 }
 #objectTable th:last-child,
-#objectTable td:last-child {
+#misTable th:last-child,
+#objectTable td:last-child,
+#misTable td:last-child {
   border-right: 0;
 }
-#objectTable tr td:first-child {
+#objectTable tr td:first-child,
+#misTable tr td:first-child {
   text-align: center;
 }
-#objectTable caption {
+
+#objectTable,
+#misTable tbody tr {
+  cursor: pointer;
+}
+
+#objectTable:not(:first-child) tr:hover,
+#misTable:not(:first-child) tr:hover {
+  background-color: #e6f0f8;
+}
+
+#objectTable caption,
+#misTable caption {
   caption-side: bottom;
   display: none;
 }

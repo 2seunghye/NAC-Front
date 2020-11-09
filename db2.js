@@ -60,3 +60,38 @@ export const lookUpArr = [
     scName: 'acc',
   },
 ];
+
+export const policyArr = [
+  {
+    action: 'connect',
+    methodName: 'Yu',
+    minInterval: 30,
+    misbehaviorTables: [
+      {
+        penalty: 2,
+        reason: 'FrequentAccess',
+        time: '2020-11-07T17:07:12.819',
+      },
+      {
+        penalty: 3,
+        reason: 'FrequentAccess',
+        time: '2020-11-07T17:07:12.819',
+      },
+      {
+        penalty: 4,
+        reason: 'FrequentAccess',
+        time: '2020-11-07T17:07:12.819',
+      },
+    ],
+    noFR: 1,
+    object: {
+      macAddress: '0.0.0.0',
+      name: 'gateWay',
+    },
+    permission: true,
+    resource: 'network',
+    threshold: 1,
+    timeOfUnblock: '2020-11-07T17:09:12.819',
+    toLR: '2020-11-07T17:07:12.819',
+  },
+];
