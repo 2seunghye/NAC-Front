@@ -1,0 +1,62 @@
+.error_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .error_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    img {
+      width: 50%;
+    }
+  }
+  .error_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    strong {
+      font-size: 80px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 15px;
+      padding: 5px;
+    }
+  }
+  .createChannel {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button {
+      margin-top: 10px;
+      background-color: #3975ec;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      padding: 5px;
+      width: 230px;
+      height: 40px;
+    }
+    button:hover {
+      background-color: #3268d6;
+    }
+    button:focus {
+      outline: none;
+      border: none;
+    }
+    a {
+      color: #fff;
+      font-weight: 700;
+      outline: none;
+      text-decoration: none;
+      padding: 3px 50px;
+    }
+  }
+}
