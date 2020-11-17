@@ -1,0 +1,4 @@
+{
+  "extends": ["google", "plugin:prettier/recommended"],
+  "ignorePatterns": ["node_modules/"]
+}

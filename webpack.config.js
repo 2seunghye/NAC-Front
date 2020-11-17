@@ -3,11 +3,19 @@ const autoprefixer = require("autoprefixer");
 const ExtractCSS = require("extract-text-webpack-plugin");
 
 const MODE = process.env.WEBPACK_ENV;
-const ENTRY_FILE = path.resolve(__dirname, "assets", "js", "main.js");
+const ENTRY_LOGIN_FILE = path.resolve(__dirname, "assets", "js", "Login", "login.js");
+const ENTRY_HOME_FILE = path.resolve(__dirname, "assets", "js", "Home", "home.js");
+const ENTRY_CREATECHANNEL_FILE = path.resolve(__dirname, "assets", "js", "CreateChannel", "createChannel.js");
+const ENTRY_MAIN_FILE = path.resolve(__dirname, "assets", "js", "main.js");
 const OUTPUT_DIR = path.join(__dirname, "static");
 
 const config = {
-  entry: ["@babel/polyfill", ENTRY_FILE],
+  entry: {
+    login : ["@babel/polyfill/noConflict", ENTRY_LOGIN_FILE],
+    home : ["@babel/polyfill/noConflict", ENTRY_HOME_FILE],
+    createChannel : ["@babel/polyfill/noConflict", ENTRY_CREATECHANNEL_FILE],
+    main : ["@babel/polyfill/noConflict", ENTRY_MAIN_FILE]
+    },
   mode: MODE,
   module: {
     rules: [

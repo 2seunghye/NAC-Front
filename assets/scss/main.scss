@@ -7,22 +7,36 @@ html,
 body {
   height: 100%;
 }
+
 body {
-  background-color: #fafafa;
+  background-color: #f6f6fa;
   color: $black;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  //   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
   font-size: 14px;
 }
 
 main {
-  width: 100%;
-  max-width: 1200px;
+  position: relative;
+  max-width: 1400px;
   margin: 0 auto;
-  min-height: 70vh;
+  min-height: 80vh;
+}
+
+#opacity {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
 }
 
 button,
-input:not([type='file']),
+input:not([type="file"]),
 textarea,
 .fileUpload {
   padding: 7px 10px;
@@ -35,7 +49,7 @@ textarea,
   background-color: white;
   max-width: 320px;
   resize: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
   &::placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7);
@@ -43,18 +57,14 @@ textarea,
 }
 button {
   border: none;
-  background-color: #3498db;
-  color: white;
+  background-color: #e8e8eb;
+  color: #333;
 }
 
 button,
-input[type='submit'] {
+input[type="submit"] {
   cursor: pointer;
 }
-
-// .test-btn {
-//   display: none;
-// }
 
 #objectTable,
 #misTable {
@@ -62,21 +72,164 @@ input[type='submit'] {
 }
 
 #container {
+  visibility: visible;
   margin: 0 auto;
-  margin-top: 20px;
+  padding-top: 20px;
   justify-content: space-around;
   display: flex;
   width: 100%;
 }
 
+.content__column:first-child {
+  width: 30%;
+}
+.content__column:nth-child(2) {
+  width: 35%;
+}
+.content__column:last-child {
+  width: 35%;
+}
+
 .content__column {
+  position: relative;
+  #network-popup {
+    top: -10%;
+    left: 50%;
+    height: 500px;
+  }
+  #addUser-popup {
+    top: -20%;
+    left: 50%;
+    height: 630px;
+  }
+  #updateUser-popup {
+    top: -20%;
+    left: -50%;
+    height: 630px;
+  }
+  #network-popup,
+  #addUser-popup,
+  #updateUser-popup {
+    visibility: hidden;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    #closeBtn,
+    #usp-closeBtn,
+    #udu-closeBtn {
+      font-size: 22px;
+      font-weight: 400;
+      color: #ccc;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 1%;
+      right: 3%;
+      background-color: inherit;
+      box-shadow: none;
+    }
+
+    #closeBtn:focus,
+    #usp-closeBtn:focus,
+    #udu-closeBtn:focus {
+      outline: none;
+    }
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    input:disabled {
+      background-color: #e8f6ff;
+    }
+    #popup input,
+    #addUserForm input,
+    #updateUserForm input {
+      outline: none;
+      box-shadow: none;
+      display: block;
+      width: 360px;
+      height: 44px;
+      padding: 0 12px;
+      border-radius: 7px;
+      margin-bottom: 12px;
+      font-size: 16px;
+      border: 1px solid #d3dce6;
+      transition: border-color 200ms ease-in-out;
+    }
+    #popup input:focus,
+    #addUserForm input:focus,
+    #updateUserForm input:focus,
+    #popup input:hover,
+    #addUserForm input:hover,
+    #updateUserForm input:hover,
+    #popup input:active,
+    #addUserForm input:active,
+    #updateUserForm input:active {
+      outline: none;
+      box-shadow: none;
+      border-color: $border-color;
+    }
+
+    #popup input:focus,
+    #addUserForm input:focus,
+    #updateUserForm input:focus {
+      border: 1px solid #3975ec;
+    }
+    #createNetworkBtn,
+    #submitUserBtn {
+      cursor: pointer;
+      margin-top: 5px;
+      background-color: #f8f8f9;
+      color: #333;
+      border-radius: 5px;
+      border: none;
+      padding: 5px;
+      width: 360px;
+      height: 45px;
+      margin-top: 20px;
+    }
+  }
+  .table-header {
+    display: flex;
+    align-items: flex-start;
+
+    h2 {
+      width: 60%;
+      margin: 0;
+    }
+    button {
+      width: 40%;
+      font-size: 10px;
+      background-color: #f8f8f9;
+    }
+    button:hover {
+      background-color: #f1f1f1;
+    }
+  }
   margin: 10px;
   background-color: #fff;
   padding: 20px;
-  width: 33%;
   height: 100%;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  select {
+    margin-top: 10px;
+    width: 100%;
+    padding: 0.5em 0.1em;
+    font-family: inherit;
+    border: 1px solid #999;
+    border-radius: 5px;
+  }
   h2 {
     font-size: 16px;
     font-weight: 700;
@@ -100,7 +253,32 @@ input[type='submit'] {
       align-items: center;
       width: 50%;
     }
+    dd {
+      margin-left: 70px;
+    }
   }
+}
+
+.lookup-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#addUserBtn {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+  padding: 7px 10px;
+  display: none;
+  font-size: 11px;
+  margin-top: 20px;
+  border: none;
+  width: 40%;
+  font-size: 10px;
+  background-color: #f8f8f9;
+}
+
+#addUserBtn:hover {
+  background-color: #f1f1f1;
 }
 
 #objectTable,
@@ -111,10 +289,19 @@ input[type='submit'] {
 }
 #objectTable th,
 #misTable th {
+  height: 30px;
+  display: table-cell;
+  vertical-align: middle;
   color: #333;
   background: #f8f8f8;
   text-align: center;
 }
+
+#objectTable th:not(:first-child),
+#misTable th:not(:first-child) {
+  width: 100%;
+}
+
 #objectTable th,
 #misTable th,
 #objectTable td,
@@ -128,6 +315,18 @@ input[type='submit'] {
 #misTable td:first-child {
   border-left: 0;
 }
+
+#objectTable th:nth-child(2) {
+  width: 40%;
+}
+
+#misTable th:nth-child(2) {
+  width: 35%;
+}
+#misTable th:nth-child(3) {
+  width: 10%;
+}
+
 #objectTable th:last-child,
 #misTable th:last-child,
 #objectTable td:last-child,
@@ -153,4 +352,38 @@ input[type='submit'] {
 #misTable caption {
   caption-side: bottom;
   display: none;
+}
+
+#updateUserBtn,
+#deleteUserBtn {
+  display: none;
+  width: 100%;
+  font-size: 10px;
+  background-color: #f8f8f9;
+  margin-bottom: 10px;
+  margin-left: 7px;
+}
+
+#deleteNetworkBtn {
+  display: none;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+#deleteNetworkBtn button {
+  margin-top: 10px;
+  width: 40%;
+  font-size: 10px;
+  background-color: #f8f8f9;
+}
+
+#updateUserBtn:hover,
+#deleteUserBtn:hover,
+#deleteNetworkBtn button:hover {
+  background-color: #f1f1f1;
+}
+
+.button-container {
+  width: 50%;
+  display: flex;
 }

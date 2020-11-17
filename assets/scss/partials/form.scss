@@ -6,14 +6,16 @@
   justify-content: center;
   align-items: center;
   h2 {
+    text-align: center;
     font-size: 30px;
     padding-bottom: 30px;
   }
+
   form {
     width: 100%;
     max-width: 320px;
     margin-bottom: 10px;
-    input:not([type='file']) {
+    input:not([type="file"]) {
       outline: none;
       box-shadow: none;
       display: block;
@@ -39,18 +41,22 @@
     input:focus {
       border: 1px solid $main-color;
     }
-    input[type='submit'] {
+    input[type="button"],
+    input[type="submit"] {
+      cursor: pointer;
       outline: none;
       border: none;
       background-color: $main-color;
       color: white;
     }
 
-    input[type='submit']:hover {
+    input[type="button"]:hover,
+    input[type="submit"]:hover {
       background-color: $sub-color;
     }
 
-    input[type='submit']:focus {
+    input[type="button"]:focus,
+    input[type="submit"]:focus {
       outline: none;
       border: none;
     }
@@ -80,6 +86,7 @@
   }
 
   .join-form {
+    margin-top: 10px;
     p {
       font-size: 13px;
       color: #333;

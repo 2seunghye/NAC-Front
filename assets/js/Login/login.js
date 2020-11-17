@@ -1,4 +1,5 @@
-const server = "36.38.56.78";
+
+const server = "180.189.90.200";
 
 const isCreatedChannel = () => {
   fetch(`http://` + server + `:9322/api/v1/NACUser/isCreatedChannel`, {}).then((res) => {

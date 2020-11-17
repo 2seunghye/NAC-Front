@@ -1,13 +1,15 @@
 import routes from '../routes';
 
-import { lookUpArr } from '../db2';
-
 export const error = (req, res) => {
   res.render('error', { pageTitle: 'error' });
 };
 
+export const no_channel = (req, res) => {
+  res.render('no_channel', { pageTitle: 'no_channel' });
+};
+
 export const home = (req, res) => {
-  res.render('home', { pageTitle: 'home', lookUpArr });
+  res.render('home', { pageTitle: 'home' });
 };
 
 export const getJoin = (req, res) => {
@@ -38,6 +40,10 @@ export const getJoin = (req, res) => {
 // };
 
 export const getLogin = (req, res) => res.render('login', { pageTitle: 'Log In' });
+
+// export const postLogin = (req, res) => {
+//   res.render('no_channel');
+// };
 
 // export const postLogin = passport.authenticate('local', {
 //   failureRedirect: routes.login,
