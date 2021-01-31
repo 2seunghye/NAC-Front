@@ -1,7 +1,7 @@
 # 🙋‍♀️ NAC-Front
 
 ## use
-https://github.com/lcy960729/NAC_using_hyperledgerFabric](https://github.com/lcy960729/NAC_using_hyperledgerFabric)
+[https://github.com/lcy960729/NAC_using_hyperledgerFabric](https://github.com/lcy960729/NAC_using_hyperledgerFabric)
 - 위 링크로 들어가시면, 작동 환경과 시작법의 설명이 나와있습니다
 
 ## Purpose
